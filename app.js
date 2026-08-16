@@ -18,7 +18,7 @@ function updateQuotaCounter() {
     localStorage.setItem('nova_quota', JSON.stringify(quotaData));
     
     if (quotaData.count === Math.floor(DAILY_LIMIT * ALERT_THRESHOLD)) {
-        alert(`⚠️ يا سيف! استهلكت 80% من الكوتا (16/20).`);
+        alert(`⚠️ استهلكت 80% من الكوتا (16/20).`);
     }
 }
 
@@ -57,7 +57,7 @@ if (removeImageBtn) {
 // --- تحميل الملف HTML ---
 function downloadSite() {
     if (!currentGeneratedCode) {
-        alert("ولد الموقع الأول يا سيف! 🚀");
+        alert("ولد الموقع الأول! 🚀");
         return;
     }
     const fileId = Math.random().toString(36).substr(2, 5);
@@ -83,7 +83,7 @@ async function generateSite() {
     const promptValue = promptInput.value;
 
     if (!promptValue && !selectedImageBase64) {
-        alert("اكتب وصف أو ارفع صورة يا سيف عشان نبدأ!");
+        alert("اكتب وصف أو ارفع صورة عشان نبدأ!");
         return;
     }
 
